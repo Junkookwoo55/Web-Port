@@ -1,0 +1,103 @@
+/* ==============================================================
+
+Template name : Bootsnav - Multi Purpose Header
+Categorie : Bootstrap Menu in CSS
+Author : adamnurdin01
+Version : v.1.2
+Created : 2016-06-02
+Last update : 2016-10-19
+
+============================================================== */
+
+/* MEGAMENU STYLE
+=================================*/
+/* Base navbar styling */
+nav.navbar.bootsnav {
+    margin-bottom: 0;
+    border-radius: 0;
+    background-color: #fff;
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+nav.navbar.bootsnav ul.nav > li > a {
+    color: #6f6f6f;
+    background-color: transparent;
+    outline: none;
+    margin-bottom: -2px;
+}
+
+nav.navbar.bootsnav .navbar-toggle {
+    background-color: #fff;
+    border: none;
+    padding: 0;
+    font-size: 18px;
+    position: relative;
+    top: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    nav.navbar.bootsnav .navbar-header {
+        float: none;
+    }
+
+    nav.navbar.bootsnav .navbar-toggle {
+        display: block;
+    }
+
+    nav.navbar.bootsnav .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: none;
+    }
+
+    nav.navbar.bootsnav .navbar-collapse.collapse {
+        display: none !important;
+    }
+
+    nav.navbar.bootsnav .navbar-collapse.collapse.in {
+        display: block !important;
+    }
+
+    nav.navbar.bootsnav .navbar-nav {
+        float: none!important;
+        margin: 7.5px -15px;
+    }
+
+    nav.navbar.bootsnav .navbar-nav>li {
+        float: none;
+    }
+
+    nav.navbar.bootsnav .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+/* Ensure dropdowns behave correctly on mobile */
+nav.navbar.bootsnav ul.nav li.dropdown:hover > ul.dropdown-menu {
+    display: none;
+}
+
+nav.navbar.bootsnav ul.nav li.dropdown:hover > a:after {
+    content: none;
+}
+
+/* Adjust nav for tablets and above */
+@media (min-width: 768px) and (max-width: 1024px) {
+    nav.navbar.bootsnav .navbar-nav>li>a {
+        padding: 15px 10px;
+    }
+}
+
+/* Full width nav in mobile view */
+nav.navbar.bootsnav.navbar-mobile .navbar-collapse {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow: hidden;
+    max-height: none;
+    z-index: 999;
+}
